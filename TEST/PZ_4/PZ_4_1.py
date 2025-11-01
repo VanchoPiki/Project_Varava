@@ -1,13 +1,15 @@
 #Даны два целых числа А и В (А < Б). Найти произведение всех целых чисел от А до В включительно.
 #Ввод значений
-A, B = int(input()), int(input())
-#Нужная переменаая
-t = 0
+A= int(input())
+B = int(input())
+t = 1
+
 #Цикл
-while B>A:
+while A<B:
     A += 1
-    t += A
-print(t)
+    t *= A
+
+    print(t)
 #Вывод ошибок
 try:
     A, B = int(input()), int(input())

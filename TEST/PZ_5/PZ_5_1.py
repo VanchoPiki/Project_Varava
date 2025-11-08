@@ -8,9 +8,9 @@ def main(n,m):
         n += 1
         t += n
     return t
-
+#Проверка
 try:
-    n,m = int(input("Ввкдите первое число\n")), int(input("Введите второе число\n"))
+    n,m = int(input("Ввeдите первое число\n")), int(input("Введите второе число\n"))
     print(main(n, m))
 except ValueError or NameError as e:
     print(e)

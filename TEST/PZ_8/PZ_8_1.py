@@ -1,15 +1,16 @@
-"""Дана строка груши 45 991 63 100 12 морковь 13 47 26 0 16, отражающая продажи
-продукции по дням в кг. Преобразовать информацию из строки в словари, с использованием
-функции найти минимальные продажи по каждому виду продукции,
-результаты вывести на экран."""
+"""Измените имя на 'Jessa' во вложенном словаре."""
 
-string = "груши 45 991 63 100 12 морковь 13 47 26 0 16"
+nested_student_dict = {
+    "class" : {
+        "student" : {
+            "name" : "Mike",
+            "marks" : {
+                "physics" : 70,
+                "history" : 80
+            }
+        }
+    }
+}
 
-def main(a):
-    b = a.split()
-    s_t = {}
-    s_t["Груши"] = min([int(i) for i in b[1:6]])
-    s_t["Морковь"] = min([int(i) for i in b[7:12]])
-    return s_t
-
-print(main(string))
+nested_student_dict["class"]["student"]["name"] = "Jessa"
+print(nested_student_dict)

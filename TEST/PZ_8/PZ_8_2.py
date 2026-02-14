@@ -4,12 +4,15 @@
 результаты вывести на экран."""
 
 string = "груши 45 991 63 100 12 морковь 13 47 26 0 16"
-
+print(string.split())
 def main(a):
     b = a.split()
     s_t = {}
-    s_t["Груши"] = min([int(i) for i in b[1:6]])
-    s_t["Морковь"] = min([int(i) for i in b[7:12]])
+
+    s_t["Груши"] = b[1:6], min([int(i) for i in b[1:6]])
+    s_t["Морковь"] = b[7:12], min([int(i) for i in b[7:12]])
+    print("Груша :", min([int(i) for i in b[1:6]]))
+    print("Морковь :", min([int(i) for i in b[7:12]]))
     return s_t
 
 print(main(string))

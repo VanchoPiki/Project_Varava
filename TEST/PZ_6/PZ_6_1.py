@@ -16,8 +16,8 @@ for i in a:
         c.append(i)
 
 #Сортировка списков
-c.sort()
-a.sort()
+#c.sort()
+#a.sort()
 #Вывод списков
 print(f"Начальный список:   {a}\n")
 print(f"Нечетные в этом списке:     {c}\n\nДлина:     {len(c)}")

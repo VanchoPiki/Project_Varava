@@ -4,23 +4,26 @@
 
 check_1 = "Канада"
 check_2 = "США"
+try:
+    #туры
+    agencies = {
+        "Вояж": {"Мексика", "Канада", "Израиль", "Италия", "США"},
+        "РейнаТур": {"Англия", "Япония", "Канада", "ЮАР"},
+        "Радуга": {"США", "Испания", "Швеция", "Австралия"}
+    }
 
-# Используем словарь, чтобы сохранить связь "Название - Страны"
-agencies = {
-    "Вояж": {"Мексика", "Канада", "Израиль", "Италия", "США"},
-    "РейнаТур": {"Англия", "Япония", "Канада", "ЮАР"},
-    "Радуга": {"США", "Испания", "Швеция", "Австралия"}
-}
+    #для хранения результатов
+    can_go_to_canada = []
+    can_go_to_usa = []
+    #перебор для нахождения нужного тура
+    for name, countries in agencies.items():
+        if check_1 in countries:
+            can_go_to_canada.append(name)
+        if check_2 in countries:
+            can_go_to_usa.append(name)
 
-# Списки для хранения результатов
-can_go_to_canada = []
-can_go_to_usa = []
+    print(f"В Канаду можно поехать с: {', '.join(can_go_to_canada)}")
+    print(f"В США можно поехать с: {', '.join(can_go_to_usa)}")
 
-for name, countries in agencies.items():
-    if check_1 in countries:
-        can_go_to_canada.append(name)
-    if check_2 in countries:
-        can_go_to_usa.append(name)
-
-print(f"В Канаду можно поехать с: {', '.join(can_go_to_canada)}")
-print(f"В США можно поехать с: {', '.join(can_go_to_usa)}")
+except ValueError as e:
+    print(f"Произошла ошибка - {e}")

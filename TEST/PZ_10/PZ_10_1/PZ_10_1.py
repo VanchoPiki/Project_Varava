@@ -33,6 +33,7 @@ try:
                 f"срд.ариф: {arithmetic_mean_0}\n\n"
                 f"положительные числа: {list_positiv}\n\n"
                 f"сумма полож: {sum_positiv}\n\n"
-                f"срд.ариф.чет: {arithmetic_mean}")
+                f"срд.ариф.чет: {arithmetic_mean}\n\n"
+                f"исходные данные : {list}")
 except ValueError as e:
     print(f"Произошла ошибка: {e}")

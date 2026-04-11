@@ -6,24 +6,26 @@ check_1 = "Канада"
 check_2 = "США"
 try:
     #туры
-    agencies = {
-        "Вояж": {"Мексика", "Канада", "Израиль", "Италия", "США"},
-        "РейнаТур": {"Англия", "Япония", "Канада", "ЮАР"},
-        "Радуга": {"США", "Испания", "Швеция", "Австралия"}
-    }
+    voyage = {"Мексика", "Канада", "Израиль", "Италия", "США"}
+    reyna_tur = {"Англия", "Япония", "Канада", "ЮАР"}
+    radugs = {"США", "Испания", "Швеция", "Австралия"}
 
-    #для хранения результатов
-    can_go_to_canada = []
-    can_go_to_usa = []
-    #перебор для нахождения нужного тура
-    for name, countries in agencies.items():
-        if check_1 in countries:
-            can_go_to_canada.append(name)
-        if check_2 in countries:
-            can_go_to_usa.append(name)
+    print("Туры в Канаду можно приобрести в:")
+    if "Канада" in voyage:
+        print("Вояж")
+    if "Канада" in reyna_tur:
+        print("РейнаТур")
+    if "Канада" in radugs:
+        print("Радуга")
 
-    print(f"В Канаду можно поехать с: {', '.join(can_go_to_canada)}")
-    print(f"В США можно поехать с: {', '.join(can_go_to_usa)}")
+    print("\nТуры в США можно приобрести в:")
+    if "США" in voyage:
+        print("Вояж")
+    if "США" in reyna_tur:
+        print("РейнаТур")
+    if "США" in radugs:
+        print("Радуга")
+
 
 except ValueError as e:
     print(f"Произошла ошибка - {e}")

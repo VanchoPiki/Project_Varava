@@ -4,16 +4,12 @@
 """
 try:
 
-    def lowercase_generator(text):
-        for char in text:
-            yield char.lower()
+    def main(text: str):
+        yield from map(str.lower, text)
 
+    input_str = "Привет"
 
-    input_string = ("Привет")
-    gen = lowercase_generator(input_string)
-    result = "".join(gen)
-
-    print(f"Результат работы генератора: {result}")
+    print("".join(main(input_str)))
 
 except ValueError as e:
     print(e)

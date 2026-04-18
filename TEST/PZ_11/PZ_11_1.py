@@ -4,22 +4,25 @@
 четные числа, и вторую - для всех остальных. Найти среднее арифметическое в полученных
 последовательностях.
 """
+
 import random
+from functools import *
 
-#Ввод знаения
-try:
-    a = int(input("кол-во чисел\n\n"))
-except ValueError as e:
-    print(f"ошибка - {e}")
+def main():
 
-#начальные значения
-start_list = [random.randint(-10, 10) for i in range(a)]
-print(start_list, sum(start_list)/len(start_list))
+    a = int(input("Напишите кол-во чисел\n"))
 
-#четные
-first_list = [i for i in start_list if i%2 == 0]
-print(first_list, sum(first_list)/len(first_list))
+    b = [random.randint(-10, 10) for _ in range(a)]
+    print("Сам список", b)
 
-#нечетные
-second_list = [i for i in start_list if i%2 != 0]
-print(second_list, sum(second_list)/len(second_list))
+    с = tuple(filter(lambda x: x%2 == 0, b))
+    print("Четные: ", с)
+
+    e = tuple(filter(lambda x: x%2 != 0, b))
+    print("Нечетные: ", e)
+
+    r = lambda spisok: sum(spisok) / len(spisok) if spisok else 0
+    print("Сред. ариф. для чет. -", r(с))
+    print("Сред. ариф. для нечет. -", r(e))
+
+main()

@@ -29,11 +29,11 @@ m1 = Matrix(2, [[1, 5],
 m2 = Matrix(2, [[3, 6],
                 [7, 4]])
 
-print("Исходная матрица 1:")
+print("Матрица 1:")
 for row in m1.data:
     print(row)
 
-print("\nИсходная матрица 2:")
+print("\nМатрица 2:")
 for row in m2.data:
     print(row)
 
@@ -41,14 +41,14 @@ matrix_sum = m1.add(m2)
 matrix_sub = m1.subtract(m2)
 matrix_mul = m1.multiply(m2)
 
-print("\nРезультат сложения:")
+print("\nСложение:")
 for row in matrix_sum.data:
     print(row)
 
-print("\nРезультат вычитания:")
+print("\nВычитание:")
 for row in matrix_sub.data:
     print(row)
 
-print("\nРезультат умножения:")
+print("\nУмножение:")
 for row in matrix_mul.data:
     print(row)

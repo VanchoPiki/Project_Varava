@@ -1,8 +1,8 @@
 class Matrix:
     def __init__(self, data):
         self.data = data
-        self.rows = len(data)          # Количество строк
-        self.cols = len(data[0])       # Количество столбцов
+        self.rows = len(data)
+        self.cols = len(data[0])
 
     def plus(self, other):
         result = [[self.data[i][j] + other.data[i][j] for j in range(self.cols)] for i in range(self.rows)]
@@ -13,7 +13,6 @@ class Matrix:
         return Matrix(result)
 
     def multi(self, other):
-        # Создаем матрицу из нулей размером (строки первой x столбцы второй)
         result = [[0] * other.cols for _ in range(self.rows)]
         for i in range(self.rows):
             for j in range(other.cols):
@@ -22,7 +21,6 @@ class Matrix:
         return Matrix(result)
 
 
-# Передаем только данные, строки и столбцы класс посчитает сам
 m1 = Matrix([[2, 2],
              [3, 6]])
 

@@ -23,11 +23,11 @@ class Matrix:
         return Matrix(self.size, result)
 
 
-m1 = Matrix(2, [[1, 2],
-                [3, 4]])
+m1 = Matrix(2, [[1, 5],
+                [3, 7]])
 
-m2 = Matrix(2, [[5, 6],
-                [7, 8]])
+m2 = Matrix(2, [[3, 6],
+                [7, 4]])
 
 print("Исходная матрица 1:")
 for row in m1.data:
